@@ -20,7 +20,7 @@ def register(request):
         registerform=SignUpForm()
     return render(request, 'register.html', {"regform":registerform, "msg":msg}) 
 
-def login_view(request):
+def login(request):
     msg=None
     if request.method=='POST':
         form=LoginForm(request.POST) 
@@ -46,7 +46,9 @@ def login_view(request):
 def admin(request):
     return render(request, 'adminpage.html')    
 
-
+def logout_view(request):
+    logout(request)
+    return redirect('index')
 
 
 
