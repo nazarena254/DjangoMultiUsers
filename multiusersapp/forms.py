@@ -11,6 +11,7 @@ class LoginForm:
         widget=forms.PasswordInput( attrs={"class":"form-control"} )
     )
 
+
 class SignUpForm:
     username=forms.CharField(widget=forms.TextInput( attrs={"class":"form-control"} ))
     password1=forms.PasswordInput(widget=forms.PasswordInput( attrs={"class":"form-control"} ))
